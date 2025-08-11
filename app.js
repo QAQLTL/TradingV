@@ -1,6 +1,6 @@
 async function loadData() {
   const symbol = document.getElementById('symbol').value;
-  const resp = await fetch(`/api/stock?symbol=${symbol}&interval=daily`);
+  const resp = await fetch(`/stock?symbol=${symbol}&interval=daily`);
   const json = await resp.json();
   if (!json.data) {
     alert("讀取失敗");
